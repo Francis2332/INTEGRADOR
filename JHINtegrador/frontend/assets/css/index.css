@@ -1,0 +1,119 @@
+ :root {
+     --color-primary: #114488E6;
+     --color-white: #FFFFFF;
+     --color-dark: #363636;
+     --color-dark-blue: #0D1B2A;
+     --color-light-gray: #dddddd;
+     --color-dark-gray: #222222;
+     --color-accent: #FFD700;
+     --color-danger: #df0b0b;
+     --color-light: #fffcfc;
+ }
+
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: var(--color-white);
+     color: var(--color-dark);
+ }
+
+ .custom-header {
+     background-color: var(--color-light);
+     padding: 1.5rem 0;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .logo-container {
+     max-width: 200px;
+     margin: 0 auto;
+ }
+
+ .logo-img {
+     width: 100%;
+     height: auto;
+     border-radius: 8px;
+ }
+
+ .role-section {
+     padding: 4rem 0;
+     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+     min-height: 70vh;
+     display: flex;
+     align-items: center;
+ }
+
+ .role-card {
+     background-color: var(--color-white);
+     border-radius: 12px;
+     padding: 2rem;
+     text-align: center;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     height: 100%;
+     border: none;
+     text-decoration: none;
+     color: inherit;
+     display: block;
+ }
+
+ .role-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+     text-decoration: none;
+     color: inherit;
+ }
+
+ .role-icon {
+     width: 100px;
+     height: 100px;
+     margin: 0 auto 1.5rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: var(--color-light);
+     border-radius: 50%;
+     padding: 1rem;
+ }
+
+ .role-icon img {
+     max-width: 100%;
+     max-height: 100%;
+ }
+
+ .role-title {
+     font-weight: 600;
+     margin-bottom: 0.5rem;
+     color: var(--color-dark-blue);
+ }
+
+ .role-description {
+     color: var(--color-dark-gray);
+     font-size: 0.9rem;
+ }
+
+ .section-title {
+     color: var(--color-dark-blue);
+     margin-bottom: 3rem;
+     font-weight: 700;
+     position: relative;
+ }
+
+ .section-title::after {
+     content: '';
+     position: absolute;
+     bottom: -10px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 80px;
+     height: 3px;
+     background-color: var(--color-accent);
+ }
+
+ @media (max-width: 768px) {
+     .role-section {
+         padding: 2rem 0;
+     }
+
+     .role-card {
+         margin-bottom: 1.5rem;
+     }
+ }

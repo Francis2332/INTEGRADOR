@@ -1,0 +1,226 @@
+        :root {
+            --color-primary: #114488;
+            --color-secondary: #0D1B2A;
+            --color-accent: #FFD700;
+            --color-light: #f8f9fa;
+            --color-dark: #343a40;
+            --color-success: #198754;
+            --color-danger: #dc3545;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: var(--color-dark);
+        }
+
+        .custom-header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-container {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+        }
+
+        .login-card,
+        .options-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            margin: 2rem auto;
+            border: none;
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--color-accent);
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #ced4da;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 0.25rem rgba(17, 68, 136, 0.25);
+        }
+
+        .btn-custom {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+
+        .option-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            text-decoration: none;
+            color: inherit;
+            border-color: var(--color-primary);
+        }
+
+        .option-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .option-title {
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .option-description {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .back-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            padding: 8px 15px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+        }
+
+        .alert-custom {
+            border-radius: 10px;
+            border: none;
+            padding: 15px 20px;
+        }
+
+        footer {
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .login-card,
+            .options-card {
+                padding: 1.5rem;
+                margin: 1rem auto;
+            }
+
+            .option-card {
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Estilos específicos para reemplazar tus clases personalizadas */
+        .myheader {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+        }
+
+        .padding-sm {
+            padding: 1rem 0;
+        }
+
+        .padding-xl {
+            padding: 3rem 0;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .client-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .option-btn {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .option-btn:hover {
+            background-color: #e0e0e0;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .form-submit {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .form-submit:hover {
+            background-color: var(--color-secondary);
+        }

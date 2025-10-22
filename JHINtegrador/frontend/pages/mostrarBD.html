@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Usuarios Registrados</title>
+    <link rel="stylesheet" href="../assets/css/Login.css" />
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            cursor: pointer;
+            background-color: #f0f0f0;
+        }
+        .btn-back {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+        .btn-list {
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+        .btn-list:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header class="myheader padding-sm">
+        <div class="mycontainer">
+            <h1>Operarios Registrados</h1>
+        </div>
+    </header>
+    <main class="padding-xl">
+        <div class="mycontainer">
+            <button class="btn-list" onclick="fetchUsers()">Listar Operarios</button>
+            <button class="btn-back" onclick="window.history.back()">Volver</button>
+            <table id="users-table">
+                <thead>
+                    <tr>
+                        <th data-column="id" data-order="desc">ID &#9660;</th>
+                        <th data-column="username" data-order="asc">Username</th>
+                        <th data-column="password" data-order="asc">Password</th>
+                        <th data-column="nombreCompleto" data-order="asc">Nombre Completo</th>
+                        <th data-column="rolId" data-order="asc">Rol ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script>
+        src = "../js/mostrarBD.js"
+        </script>
+</body>
+</html>

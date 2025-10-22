@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="../assets/css/Registrar.css">
+</head>
+<body>
+  <h1>Gestión de Usuarios</h1>
+
+  <!-- Formulario para agregar usuario -->
+  <section>
+    <h2>Agregar Usuario</h2>
+    <form id="form-usuario">
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="email" id="correo" placeholder="Correo" required>
+      <input type="password" id="contrasena" placeholder="Contraseña" required>
+      <button type="submit">Agregar</button>
+    </form>
+    .
+  </section>
+
+  <hr>
+
+  <!-- Tabla para mostrar usuarios -->
+  <section>
+    <h2>Usuarios Registrados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+        </tr>
+      </thead>
+      <tbody id="usuarios-body">
+        <!-- Aquí se cargan los datos dinámicamente -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

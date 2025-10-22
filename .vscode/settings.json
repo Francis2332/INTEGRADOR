@@ -1,0 +1,24 @@
+{
+    
+
+    
+    "CodeGPT.apiKey": "LM Studio",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "ConectionDBPortales",
+            "database": "ParkingDB",
+            "username": "root",
+            "password": "password123"
+        }
+    ]
+}
