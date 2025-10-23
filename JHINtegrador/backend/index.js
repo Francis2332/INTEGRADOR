@@ -69,7 +69,10 @@ app.use((req, res, next) => {
   req.db = db;
   next();
 });
-
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Error interno del servidor' });
+});
 // Prueba inicial de conexion 
 db.getConnection()
   .then(connection => {
@@ -81,25 +84,31 @@ db.getConnection()
   });
 
   // Carga las rutas migradas
-app.use('/api/usuarios', require('./routes/usuariosRoutes'));
-app.use('/api/tipos-vehiculo', require('./routes/tiposVehiculoRoutes'));
-app.use('/api/espacios', require('./routes/espaciosRoutes')); // Añade esta línea
-app.use('/api/auth', require('./routes/authRoutes'));
-app.use('/api/entradas', require('./routes/entradasRoutes'));
-app.use('/api/salidas', require('./routes/salidasRoutes'));
-app.use('/api/tarifas', require('./routes/tarifasRoutes'));
-app.use('/api/historial', require('./routes/historialRoutes')); 
+  app.use('/api/auth', require('./routes/autenticadorRoutes'));
+//app.use('/api/usuarios', require('./routes/usuariosRoutes'));
+//app.use('/api/tipos-vehiculo', require('./routes/tiposVehiculoRoutes'));
+  app.use('/api/espacios', require('./routes/espaciosRoutes')); // Añade esta línea
+//app.use('/api/auth', require('./routes/authRoutes'));
+//app.use('/api/entradas', require('./routes/entradasRoutes'));
+//app.use('/api/salidas', require('./routes/salidasRoutes'));
+//app.use('/api/tarifas', require('./routes/tarifasRoutes'));
+//app.use('/api/historial', require('./routes/historialRoutes')); 
 // (Añade otras rutas como tarifasRoutes, historialRoutes cuando las migres)
 // ======================= RUTAS =======================
 
 // GET - Obtener todos los usuarios
-app.get('/api/usuarios', (req, res) => {
-    const query = 'SELECT * FROM Usuarios';
-    db.query(query, (err, results) => {
-        if (err) return res.status(500).json({ error: 'Error al obtener usuarios' });
+// ✅ CORRECTO - Usando async/await
+app.get('/api/usuarios', async (req, res) => {
+    try {
+        const query = 'SELECT * FROM Usuarios';
+        const [results] = await db.query(query);
         res.json(results);
-    });
+    } catch (err) {
+        console.error('Error al obtener usuarios:', err);
+        res.status(500).json({ error: 'Error al obtener usuarios' });
+    }
 });
+
 // POST - Tipos de Vehiculo
 app.post('/api/tipos-vehiculo', (req, res) => {
     console.log('Datos recibidos:', req.body);

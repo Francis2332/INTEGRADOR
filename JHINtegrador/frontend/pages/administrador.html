@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administrador - Los Portales</title>
+    <!-- Enlaza el archivo CSS para estilos -->
     <link rel="stylesheet" href="../assets/css/admin_operario.css">
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS para componentes responsivos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome para iconos -->
+    <!-- Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Encabezado con logo y título -->
     <header class="custom-header padding-sm">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <div class="d-flex align-items-center">
+                        <!-- Imagen del logo -->
                         <img src="../assets/img/losportales.jpeg" alt="Los Portales" class="logo-img me-3" style="max-height: 60px; border-radius: 5px;">
+                        <!-- Título del panel -->
                         <h1 class="h3 mb-0">Panel de Administrador - Los Portales <span class="admin-badge">ADMIN</span></h1>
                     </div>
                 </div>
                 <div class="col-md-4 text-md-end">
+                    <!-- Botón para volver al inicio -->
                     <a href="../index.html" class="back-btn">
                         <i class="fas fa-arrow-left me-2"></i>Volver al Inicio
                     </a>
@@ -28,57 +33,21 @@
             </div>
         </div>
     </header>
-    
     <main class="main-container">
-        <!-- Login Section -->
-        <section id="login-section" class="padding-xl w-100">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-7 col-12">
-                        <div class="login-card">
-                            <h2 class="section-title">INGRESO ADMINISTRADOR</h2>
-                            <div class="alert alert-info alert-custom text-center mb-4">
-                                <i class="fas fa-info-circle me-2"></i>Use: <strong>root</strong> / <strong>Root@123</strong> para acceder
-                            </div>
-                            <form id="admin-login-form">
-                                <div class="mb-3">
-                                    <label for="usuario" class="form-label">Usuario Administrador</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text"><i class="fas fa-user-shield"></i></span>
-                                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario admin" required>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <label for="contrasena" class="form-label">Contraseña</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña admin" maxlength="8" required>
-                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
-                                            <i class="fas fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-custom">Ingresar como Administrador</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Admin Options Section (hidden initially) -->
-        <section id="admin-options-section" class="padding-xl w-100" style="display: none;">
+        <!-- Sección del panel de administración -->
+        <section id="admin-options-section" class="padding-xl w-100">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="options-card admin-options-card">
+                            <!-- Título del panel -->
                             <h2 class="section-title">Panel de Administración</h2>
+                            <!-- Mensaje de bienvenida -->
                             <div class="alert alert-success alert-custom text-center mb-4">
                                 <i class="fas fa-check-circle me-2"></i>Bienvenido, <span id="welcome-admin" class="fw-bold">Administrador</span>. Sesión iniciada correctamente.
                             </div>
                             <div class="row g-4">
+                                <!-- Opción para crear operario -->
                                 <div class="col-lg-4 col-md-6">
                                     <a href="CrearUsuario.html" class="admin-option-card">
                                         <div class="option-icon">
@@ -88,6 +57,7 @@
                                         <p class="option-description">Agregar nuevos usuarios al sistema</p>
                                     </a>
                                 </div>
+                                <!-- Opción para editar operario -->
                                 <div class="col-lg-4 col-md-6">
                                     <a href="edit-user.html" class="admin-option-card">
                                         <div class="option-icon">
@@ -97,6 +67,7 @@
                                         <p class="option-description">Modificar información de usuarios existentes</p>
                                     </a>
                                 </div>
+                                <!-- Opción para eliminar usuario -->
                                 <div class="col-lg-4 col-md-6">
                                     <a href="delete-user.html" class="admin-option-card">
                                         <div class="option-icon">
@@ -106,6 +77,7 @@
                                         <p class="option-description">Remover usuarios del sistema</p>
                                     </a>
                                 </div>
+                                <!-- Opción para gestionar espacios -->
                                 <div class="col-lg-4 col-md-6">
                                     <a href="manage-spaces.html" class="admin-option-card">
                                         <div class="option-icon">
@@ -115,6 +87,7 @@
                                         <p class="option-description">Administrar espacios de estacionamiento</p>
                                     </a>
                                 </div>
+                                <!-- Opción para historial de registros -->
                                 <div class="col-lg-4 col-md-6">
                                     <a href="view-records.html" class="admin-option-card">
                                         <div class="option-icon">
@@ -124,6 +97,7 @@
                                         <p class="option-description">Consultar todos los registros del sistema</p>
                                     </a>
                                 </div>
+                                <!-- Opción para configurar tarifas -->
                                 <div class="col-lg-4 col-md-6">
                                     <a href="config-tariffs.html" class="admin-option-card">
                                         <div class="option-icon">
@@ -133,6 +107,7 @@
                                         <p class="option-description">Establecer y modificar tarifas</p>
                                     </a>
                                 </div>
+                                <!-- Opción para gestionar roles -->
                                 <div class="col-lg-4 col-md-6">
                                     <a href="manage-roles.html" class="admin-option-card">
                                         <div class="option-icon">
@@ -142,6 +117,7 @@
                                         <p class="option-description">Administrar permisos y roles de usuario</p>
                                     </a>
                                 </div>
+                                <!-- Opción para ver base de datos -->
                                 <div class="col-lg-4 col-md-6">
                                     <a href="mostrarBD.html" class="admin-option-card">
                                         <div class="option-icon">
@@ -151,6 +127,7 @@
                                         <p class="option-description">Ver y gestionar todos los usuarios</p>
                                     </a>
                                 </div>
+                                <!-- Opción para cerrar sesión -->
                                 <div class="col-lg-4 col-md-6">
                                     <div class="admin-option-card d-flex flex-column">
                                         <div class="option-icon">
@@ -158,6 +135,7 @@
                                         </div>
                                         <h4 class="option-title">Cerrar Sesión</h4>
                                         <p class="option-description">Salir del panel de administración</p>
+                                        <!-- Botón de cerrar sesión -->
                                         <button id="logout-btn" class="btn logout-btn mt-auto">
                                             <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
                                         </button>
@@ -170,16 +148,13 @@
             </div>
         </section>
     </main>
-    
+    <!-- Pie de página -->
     <footer class="text-center">
         <div class="container">
             <p class="mb-0">&copy; 2025 Los Portales. Todos los derechos reservados.</p>
         </div>
     </footer>
-    
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS para funcionalidades interactivas -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/adminLogin.js"></script>
-        
-</body>
-</html>
+    <!-- Script para manejar el panel -->
+    <script src="../js/adminPanel.js"></script>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Usuarios Registrados</title>
-    <link rel="stylesheet" href="../assets/css/Login.css" />
+    <link rel="stylesheet" href="../assets/css/admin_operario.css" />
     <style>
         table {
             width: 100%;
@@ -57,7 +57,7 @@
     </header>
     <main class="padding-xl">
         <div class="mycontainer">
-            <button class="btn-list" onclick="fetchUsers()">Listar Operarios</button>
+            <button id="btnListar" class="btn-list">Listar Operarios</button>
             <button class="btn-back" onclick="window.history.back()">Volver</button>
             <table id="users-table">
                 <thead>
@@ -75,8 +75,7 @@
             </table>
         </div>
     </main>
-    <script>
-        src = "../js/mostrarBD.js"
-        </script>
+    <script src = "../js/mostrarBD.js">
+    </script>
 </body>
 </html>

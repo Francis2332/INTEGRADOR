@@ -66,4 +66,25 @@ let users = []; // Variable global para almacenar los usuarios
                 const newOrder = currentOrder === 'asc' ? 'desc' : 'asc';
                 sortAndDisplayUsers(column, newOrder);
             });
+            // Espera a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", () => {
+    // Asocia el evento click al botón de listar operarios
+    const btnListar = document.getElementById("btnListar");
+    if (btnListar) {
+        btnListar.addEventListener("click", () => {
+            fetchUsers();
+        });
+    }
+
+    // Asocia el evento de ordenamiento a los encabezados de la tabla
+    document.querySelectorAll('#users-table th').forEach(th => {
+        th.addEventListener('click', () => {
+            const column = th.dataset.column;
+            const currentOrder = th.dataset.order;
+            const newOrder = currentOrder === 'asc' ? 'desc' : 'asc';
+            sortAndDisplayUsers(column, newOrder);
+        });
+    });
+});
+
         });
